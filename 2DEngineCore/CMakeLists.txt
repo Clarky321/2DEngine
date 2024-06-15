@@ -34,11 +34,19 @@ add_subdirectory(../external/imgui_raylib ${CMAKE_CURRENT_BINARY_DIR}/imgui_rayl
 
 # Set up engine sources
 set(ENGINE_PUBLIC_INCLUDES
-    includes/2DEngineCore/test.h
+    includes/2DEngineCore/Camera.h
+	includes/2DEngineCore/Input.h
+	includes/2DEngineCore/Tile.h
+	includes/2DEngineCore/TileMap.h
+	includes/2DEngineCore/UIModule.h
 )
 
 set(ENGINE_PRIVATE_SOURCES
-    src/2DEngineCore/test.cpp
+    src/2DEngineCore/Camera.cpp
+	src/2DEngineCore/Input.cpp
+	src/2DEngineCore/Tile.cpp
+	src/2DEngineCore/TileMap.cpp
+	src/2DEngineCore/UIModule.cpp
 )
 
 set(ENGINE_ALL_SOURCE
