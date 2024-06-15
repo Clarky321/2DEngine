@@ -17,13 +17,13 @@ public:
 
     int GetWidth() const;
     int GetHeight() const;
-    std::vector<std::vector<Tile>>& GetTileMap();
+    std::vector<std::vector<std::vector<Tile>>>& GetTileMap();
 
 private:
     int width;
     int height;
     int tileSize;
-    std::vector<std::vector<Tile>> tileMap;
+    std::vector<std::vector<std::vector<Tile>>> tileMap;
 };
 
 #endif // TILEMAP_H

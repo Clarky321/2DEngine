@@ -32,6 +32,8 @@ endif()
 # Add imgui_raylib
 add_subdirectory(../external/imgui_raylib ${CMAKE_CURRENT_BINARY_DIR}/imgui_raylib)
 
+add_subdirectory(../external/tinyfiledialogs ${CMAKE_CURRENT_BINARY_DIR}/tinyfiledialogs)
+
 # Set up engine sources
 set(ENGINE_PUBLIC_INCLUDES
     includes/2DEngineCore/Camera.h
@@ -62,4 +64,4 @@ target_include_directories(${ENGINE_PROJECT_NAME} PUBLIC includes ${raylib_SOURC
 
 target_compile_features(${ENGINE_PROJECT_NAME} PUBLIC cxx_std_17)
 
-target_link_libraries(${ENGINE_PROJECT_NAME} raylib ImGui imgui_raylib)
+target_link_libraries(${ENGINE_PROJECT_NAME} raylib ImGui imgui_raylib tinyfiledialogs)
